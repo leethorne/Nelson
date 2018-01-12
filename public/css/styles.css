@@ -21,6 +21,7 @@ body {
 #logo {
     height: 150px;
     width: 200px;
+    margin-left: 15px;
 }
 
 .custom-nav {
@@ -84,4 +85,8 @@ body {
 
 #report-submit {
     margin-top: 10px;
+}
+
+h2 {
+    font-weight: 200;
 }
