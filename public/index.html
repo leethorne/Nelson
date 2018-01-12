@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="nelsonApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nelson</title>
+
+    <!-- Google font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700,800" />
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+
+    <!--custom CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- Angular CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+
+    <!-- Angular UI Router -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+
+</head>
+
+<body>
+    <div ui-view></div>
+
+    <!--Module-->
+    <script src="./app.js"></script>
+
+    <!--Service-->
+    <script src="./services/homeService.js"></script>
+    <script src="./services/reportService.js"></script>
+    <script src="./services/resourceService.js"></script>
+
+    <!--Controller-->
+    <script src="./controllers/homeController.js"></script>
+    <script src="./controllers/reportController.js"></script>
+    <script src="./controllers/resourceController.js"></script>
+
+    <!--any api script-->
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCt2svaTbP_7NtHqoLDJ4J2Dq2B5x0UdMo" type="text/javascript"></script> -->
+
+
+</body>
+
+</html>
