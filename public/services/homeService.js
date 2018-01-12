@@ -5,9 +5,11 @@ app.service("homeService", function ($http, $state) {
     }
 
     this.addReport = function(report) {
-        console.log(report)
         return $http.post('http://localhost:3000/api/v1/home/', report)
     }
 
-    
+    this.sendEmail = function(report) {
+        return $http.post('http://localhost:3000/api/v1/home/send/', report)
+    }
+
 })
