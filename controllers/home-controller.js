@@ -2,27 +2,23 @@
 var Report = require("../models/report.js")
 var Teacher = require("../models/teacher.js")
 var postmark = require("postmark");
+
 var client = new postmark.Client("58f59a04-aea3-462c-b08e-27680bf7a227");
 
 var StudentReport = [];
 var teacherList = [];
-// var principalId = 0;
+
 var reportId = 0;
 var teacherId = 0;
 
 
-
-StudentReport.push(new Report(reportId++, "Someone is a victim of constant bullying in your classm Miss Smith", "Mis Smith", "david@kayoventures.com"), );
-StudentReport.push(new Report(reportId++, "Someone is a victim of constant bullying in your classm Miss Smith", "Mr. John", "david@kayoventures.com"));
-StudentReport.push(new Report(reportId++, "Someone is a victim of constant bullying in your classm Miss Smith", "Mr. Billy", "david@kayoventures.com"));
-StudentReport.push(new Report(reportId++, "Someone is a victim of constant bullying in your classm Miss Smith", "Miss ", "david@kayoventures.com"));
 StudentReport.push(new Report(reportId++, "Someone is a victim of constant bullying in your classm Miss Smith", "Mis Smith", "david@kayoventures.com"));
 
-teacherList.push(new Teacher(teacherId++, "Mr Smith", "david@kayoventures.com" ));
-teacherList.push(new Teacher(teacherId++, "Mr Smith", "david@kayoventures.com" ));
-teacherList.push(new Teacher(teacherId++, "Mr Smith", "david@kayoventures.com" ));
-teacherList.push(new Teacher(teacherId++, "Mr Smith", "david@kayoventures.com" ));
-teacherList.push(new Teacher(teacherId++, "Mr Smith", "david@kayoventures.com" ));
+teacherList.push(new Teacher(teacherId++, "Mr. Daugherty", "david@kayoventures.com" ));
+teacherList.push(new Teacher(teacherId++, "Miss. Estrada", "david@kayoventures.com" ));
+teacherList.push(new Teacher(teacherId++, "Miss Forehan-Kelly", "david@kayoventures.com" ));
+teacherList.push(new Teacher(teacherId++, "Mr. Grenier", "david@kayoventures.com" ));
+teacherList.push(new Teacher(teacherId++, "Mr.Haley", "david@kayoventures.com" ));
 
 function showTeacher(req, res) {
   res.json({teacherList})
@@ -34,11 +30,22 @@ function index(req, res) {
 
 function emailReport(req, res) {
   var body = req.body.content
+  var teacher = req.body.teacherName
+  var dt = new Date();
+  var utcDate = dt.toUTCString();
+
   client.sendEmail({
     "From": "david@schoolpatron.com", 
     "To": "david@kayoventures.com", 
     "Subject": "Nelson Bully Submission", 
-    "TextBody": body
+    "TextBody": teacher + ", The following message was submitted on: " + body + " " + utcDate, 
+    
+
+  }, function(error, result) {
+      if(error) {
+        console.log("Unable to send via postmark: " + error.message);
+        return;
+      } 
   });
   
   client.sendEmail();
