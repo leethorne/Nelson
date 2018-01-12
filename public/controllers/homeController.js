@@ -8,4 +8,10 @@ app.controller("homeController", function ($scope, $state, $stateParams, homeSer
         alert("Sorry! Something went wrong...")
     })
 
+    $scope.sendEmail = function() {
+        console.log($scope.teacherEmail);
+        
+    }
+
+
 })

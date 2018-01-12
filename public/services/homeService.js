@@ -8,4 +8,5 @@ app.service("homeService", function ($http, $state) {
         return $http.post('http://localhost:3000/api/v1/home/')
     }
 
+    
 })
