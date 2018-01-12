@@ -18,14 +18,15 @@ body {
 
 /*Nav*/
 
-#logo {
-    height: 150px;
-    width: 200px;
-    margin-left: 15px;
+.logo {
+    height: 140px;
+    width: 320px;
+    margin-left: 60px;
+    vertical-align: center
 }
 
 .custom-nav {
-    height: 160px;
+    height: 140px;
     background-color: #6D6D6D;
     padding-bottom: 10px;
 }
@@ -81,6 +82,7 @@ body {
     height: 750px;
     width: 100%;
     margin-top: 10px;
+    border-radius: 25px;
 }
 
 #report-submit {
@@ -88,5 +90,6 @@ body {
 }
 
 h2 {
-    font-weight: 200;
+    font-weight: 150;
+    color: #03A8D1
 }

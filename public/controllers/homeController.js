@@ -21,6 +21,7 @@ app.controller("homeController", function ($scope, $state, $stateParams, homeSer
     }
 
     $scope.sendEmail = function() {
+        console.log("in send email")
         homeService.sendEmail($scope.report)
             .then(function (response) {
                 console.log("EMAIL Info for report: ", response)
