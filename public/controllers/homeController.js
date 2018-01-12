@@ -14,7 +14,6 @@ app.controller("homeController", function ($scope, $state, $stateParams, homeSer
         
     }
 
-
     $scope.addReport = function () {
         console.log("in add report")
         homeService.addReport($scope.report)
