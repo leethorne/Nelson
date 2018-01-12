@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-weight: 350;
+    font-family: 'Biryani', sans-serif;
+    color: #272626;
+    background-color: #ECE9E9;
+    overflow: auto;
+    height: 100%;
+    margin-bottom: 90px;
+}
+
+
+/*Nav*/
+
+#logo {
+    height: 150px;
+    width: 200px;
+}
+
+.custom-nav {
+    height: 160px;
+    background-color: #6D6D6D;
+    padding-bottom: 10px;
+}
+
+.wrapper {
+    width: 99%;
+}
+
+.custom-nav-items a {
+    display: inline;
+    color: #ECE9E9;
+    padding: 0 20px;
+    font-size: 26px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.custom-nav-items a:hover {
+    text-decoration: none;
+    opacity: .7;
+}
+
+.custom-nav-items li {
+    display: inline;
+}
+
+.login-nav-items a {
+    color: #272626;
+    padding: 0 8px;
+    font-size: 18px;
+    font-weight: 700;
+    float: right;
+}
+
+.logout-nav-item a {
+    color: #272626;
+    margin-bottom: 15px;
+    vertical-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    float: right;
+}
+
+#line {
+    text-decoration: none;
+}
+
+.login-nav-items a:hover {
+    text-decoration: underline;
+}
