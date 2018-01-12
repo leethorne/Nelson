@@ -1,0 +1,59 @@
+// var Principal = require("../models/principal.js")
+var Report = require("../models/report.js")
+var Teacher = require("../models/teacher.js")
+
+var StudentReport = [];
+var teacherList = [];
+// var principalId = 0;
+var reportId = 0;
+var teacherId = 0;
+
+StudentReport.push(new Report(reportId++, "Someone is a victim of constant bullying in your classm Miss Smith", "Mis Smith", "david@kayoventures.com"));
+StudentReport.push(new Report(reportId++, "Someone is a victim of constant bullying in your classm Miss Smith", "Mr. John", "david@kayoventures.com"));
+StudentReport.push(new Report(reportId++, "Someone is a victim of constant bullying in your classm Miss Smith", "Mr. Billy", "david@kayoventures.com"));
+StudentReport.push(new Report(reportId++, "Someone is a victim of constant bullying in your classm Miss Smith", "Miss ", "david@kayoventures.com"));
+StudentReport.push(new Report(reportId++, "Someone is a victim of constant bullying in your classm Miss Smith", "Mis Smith", "david@kayoventures.com"));
+
+teacherList.push(new Teacher(teacherId++, "Mr Smith", "david@kayoventures.com" ));
+teacherList.push(new Teacher(teacherId++, "Mr Smith", "david@kayoventures.com" ));
+teacherList.push(new Teacher(teacherId++, "Mr Smith", "david@kayoventures.com" ));
+teacherList.push(new Teacher(teacherId++, "Mr Smith", "david@kayoventures.com" ));
+teacherList.push(new Teacher(teacherId++, "Mr Smith", "david@kayoventures.com" ));
+
+function showTeacher(req, res) {
+  res.json({teacherList})
+}
+
+function index(req, res) {
+  res.json({ StudentReport })
+}
+
+function show(req, res) {
+
+}
+
+function create(req, res) {
+  var body = req.body
+
+  StudentReport.push(new Report(reportId++, body.content, body.teacherName, "david@kayoventures.com"));
+
+  res.json({ StudentReport })
+
+}
+function update(req, res) {
+
+}
+
+function destroy(res, res) {
+
+}
+
+module.exports = {
+  showTeacher: showTeacher,
+  index: index,
+  show: show,
+  create: create,
+  update, update,
+  destroy: destroy
+
+}
