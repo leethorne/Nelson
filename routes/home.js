@@ -6,9 +6,11 @@ var homeController = require("../controllers/home-controller")
 /* GET home page. */
 router.get("/", homeController.index );
 router.get("/teacher", homeController.showTeacher );
+router.post("/send", homeController.emailReport);
 router.get("/:id", homeController.show );
 router.post("/", homeController.create );
 router.put("/:id", homeController.update );
 router.delete("/:id", homeController.destroy );
+
 
 module.exports = router;
