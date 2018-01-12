@@ -13,10 +13,11 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         .state("report", {
             url: "/report",
             templateUrl: "./views/report.html",
-            controller: "reportController"
+            controller: "homeController"
         })
         .state("resource", {
             url: "/resources",
-            templateUrl: "./views/resource.html"
+            templateUrl: "./views/resource.html",
+            controller: "homeController"
         })
 })

@@ -75,3 +75,13 @@ body {
 .login-nav-items a:hover {
     text-decoration: underline;
 }
+
+#kid-img {
+    height: 750px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#report-submit {
+    margin-top: 10px;
+}
