@@ -81,7 +81,7 @@ body {
 #kid-img {
     height: 750px;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 25px;
     border-radius: 50px;
 }
 
@@ -92,5 +92,4 @@ body {
 h2 {
     font-weight: 150;
     color: #03A8D1;
-    height: 10px;
 }

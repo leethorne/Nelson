@@ -5,11 +5,12 @@
 <p class="text-center">Select your classroom teacher and let us know what happened. <em>No one will read your report</em>, except for Principal David and your teacher.</p>
     <div>
         <select class="form-group col-md-12 input-lg" name="text" title="teacher" ng-model="report.teacherName">
+            <option value="">Who is your teacher?</option>
             <option ng-repeat="teacher in teachers" value=" {{teacher.teacherName}} "> {{teacher.teacherName}} </option>
     </select>
     </div>
 
-<textarea class="form-control" name="report" id="report" cols="150" rows="15 placeholder="Tell us what happened... " ng-model="report.content"></textarea>
+<textarea class="form-control" name="report" id="report" cols="150" rows="15 "placeholder="Tell us what happened... " ng-model="report.content"></textarea>
 
 <button class="btn btn-lg btn-primary btn-block" id="report-submit" ng-click="sendEmail(); addReport()" ui-sref="resource">Submit Report</button>
 

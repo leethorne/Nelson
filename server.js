@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var compression = require('compression');
 
 var home = require('./routes/home');
-
+var resources = require('./routes/resource')
 
 var app = express();
 
@@ -25,6 +25,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api/v1/home', home);
+app.use('/api/v1/resources', resources);
 
 
 module.exports = app;
