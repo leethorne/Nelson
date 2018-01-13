@@ -2,7 +2,6 @@
 var Report = require("../models/report.js")
 var Teacher = require("../models/teacher.js")
 var postmark = require("postmark");
-
 var client = new postmark.Client("58f59a04-aea3-462c-b08e-27680bf7a227");
 
 var StudentReport = [];
@@ -38,8 +37,8 @@ function emailReport(req, res) {
     "From": "david@schoolpatron.com", 
     "To": "david@kayoventures.com", 
     "Subject": "Nelson Bully Submission", 
-    "TextBody": teacher + ", The following message was submitted on: " + body + " " + utcDate, 
-    
+    // "TextBody": teacher + ", The following message was submitted on: " + body + " " + utcDate, 
+    "HtmlBody": "<b>Nelson Report for South Lake Middle School</b> <br> <br>" + teacher + "the following anonymous message was submitted:" + "</br></br>" + body + "<br><br> Time & Date Submitted: " + utcDate + "<br> <img src=\"https://www.dropbox.com/home/image?preview=logo.png\"/>",
 
   }, function(error, result) {
       if(error) {
