@@ -13,14 +13,18 @@ var resourceArr = [];
 var id = 0;
 
 function scrape (req, res) {
-    axios.get('https://www.cde.ca.gov/ls/ss/se/bullyres.asp')
+    axios.get('https://www.bullybust.org/resources/key-resources')
     .then(function(response) {
         console.log(response.data)
         const $ = cheerio.load(response.data)
 
-        console.log(" logging $: ", $)
+        // console.log(" logging $: ", $)
 
-        var title$ = $('.editablesection')
+
+        var title$ = $('.resource')
+            console.log("title$: ", title$.attribs)
+
+            res.json(response)
 
     })
     .catch(function (error) {

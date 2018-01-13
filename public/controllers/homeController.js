@@ -14,6 +14,7 @@ app.controller("homeController", function ($scope, $state, $stateParams, homeSer
         homeService.addReport($scope.report)
             .then(function (response) {
                 console.log("RES report: ", response)
+                alert("Your anonymous report has been sent to the Principal. Thank you!")
             }, function (error) {
                 console.log(error)
                 alert("Sorry! Something went wrong...")
