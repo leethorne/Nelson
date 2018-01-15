@@ -2,7 +2,7 @@
 var Report = require("../models/report.js")
 var Teacher = require("../models/teacher.js")
 var postmark = require("postmark");
-var client = new postmark.Client("58f59a04-aea3-462c-b08e-27680bf7a227");
+var client = new postmark.Client(process.env.PMA_API_KEY);
 
 var StudentReport = [];
 var teacherList = [];
